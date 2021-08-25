@@ -9,16 +9,12 @@ function zan(){
                 "content-type": "application/x-www-form-urlencoded"
             }
         });
-        element.innerText = resp;
-        element.disabled=true;
-        return resp;
-   }
+}
 function remcls(){$('.heart').removeClass("heartAnimation");}
 function addcls(){$('.heart').addClass("heartAnimation");    }
 $(document).ready(function ()  { //.post-content 文章内页样式
 	  //$(".post-content").append("<div id='zan' class='clearfix'><div class='heart' onclick=\"zan()\"></div><br><div id='zan_text'></div></div>");
 	// senddata(url,flag);
-        
 	    $('body').on("click",'.heart',function(){
 		    $('.heart').css("background-position","")
 		    var wwin=$('.heart').attr("class");
@@ -29,5 +25,7 @@ $(document).ready(function ()  { //.post-content 文章内页样式
 		     	remcls()
 		     	tuiw=setTimeout("addcls()",100)
 		    }
-	    });
+		    $("#zan_text").text(parseInt($("#zan_text").text())+1);//更新框中的数字
+		    $(".meta-zan .meta-value").text(parseInt($(".meta-zan .meta-value").text())+1)
+	    });    
         });

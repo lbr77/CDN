@@ -17,7 +17,7 @@ function zan(){
 function remcls(){$('.heart').removeClass("heartAnimation");}
 function addcls(){$('.heart').addClass("heartAnimation");    }
 $(document).ready(function ()  { //.post-content 文章内页样式
-	  $(".post-content").append("<div id='zan' class='clearfix'><div class='heart' onclick="zan()"></div><br><div id='zan_text'></div></div>");
+	  $(".post-content").append("<div id='zan' class='clearfix'><div class='heart' onclick=\"zan()\"></div><br><div id='zan_text'></div></div>");
 	// senddata(url,flag);
         
 	    $('body').on("click",'.heart',function(){

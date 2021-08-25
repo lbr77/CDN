@@ -1,5 +1,5 @@
 function zan(){
-        let element = document.getElementsByClassName("zan")[0]
+        let element = document.getElementById("zan")
         let fetchurl = element.dataset["url"];
         let cid = element.dataset["cid"];
         fetch(fetchurl,{
@@ -9,7 +9,6 @@ function zan(){
                 "content-type": "application/x-www-form-urlencoded"
             }
         });
-
         element.innerText = resp;
         element.disabled=true;
         return resp;

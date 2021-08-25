@@ -20,4 +20,21 @@ function updateCommentLink(){
         console.error(err);
 })
 }
-updateCommentLink()
+
+$(document).ready(function ()  {
+        updateCommentLink();
+        let path = new URL(window.location.href).pathname;
+       twikoo.getCommentsCount({
+              envId:"https://comments.stevelbr.top",
+                    urls: [
+                        path
+                    ],
+                    includeReply: true
+                }).then(function(res){
+                    $(".meta-comments .meta-value").text(res[0].count)
+
+                }).catch(function(err){
+                    console.error(err);
+                });
+});
+

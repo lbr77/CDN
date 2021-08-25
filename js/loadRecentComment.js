@@ -1,4 +1,5 @@
-twikoo.getRecentComments({
+function updateCommentLink(){
+        twikoo.getRecentComments({
         envId:"https://comments.stevelbr.top",
         pageSize:5,
         includeReply: true
@@ -19,3 +20,4 @@ twikoo.getRecentComments({
 }).catch(function(err){
         console.error(err);
 })
+}

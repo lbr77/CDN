@@ -21,3 +21,4 @@ function updateCommentLink(){
         console.error(err);
 })
 }
+updateCommentLink()

@@ -28,18 +28,4 @@ $(document).ready(function ()  { //.post-content 文章内页样式
 		    $("#zan_text").text(parseInt($("#zan_text").text())+1);//更新框中的数字
 		    $(".meta-zan .meta-value").text(parseInt($(".meta-zan .meta-value").text())+1)
 	    });    
-		let path = new URL(window.location.href).pathname;
-                twikoo.getCommentsCount({
-                    envId:"https://comments.stevelbr.top",
-                    urls: [
-                        path
-                    ],
-                    includeReply: true
-                }).then(function(res){
-                    console.log(res);
-                    $(".meta-comments .meta-value").text(res[0].count)
-
-                }).catch(function(err){
-                    console.error(err);
-                })
         });

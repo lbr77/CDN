@@ -63,7 +63,7 @@
 $(document).ready(function ()  {
        if(document.referrer){
             let domain = new URL(document.referrer).host.split(".");
-            if(domain[1]!='Stevelbr'){
+            if(domain[1]!='stevelbr'){
                 Box("网站加载完成",`感谢您的访问！来自${domain[1].replace(domain[1][0],domain[1][0].toUpperCase())}的朋友！`,"success")
             }
        }
